@@ -1,12 +1,12 @@
 package com.example.vok
 
+import com.example.vok.api.articleRest
 import com.vaadin.flow.component.page.AppShellConfigurator
 import com.vaadin.flow.component.page.Viewport
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource
 import eu.vaadinonkotlin.VaadinOnKotlin
 import eu.vaadinonkotlin.rest.VokRest
-import eu.vaadinonkotlin.rest.configureToJavalin
 import eu.vaadinonkotlin.rest.gsonMapper
 import eu.vaadinonkotlin.vokdb.dataSource
 import io.javalin.Javalin
@@ -85,6 +85,7 @@ class JavalinRestServlet : HttpServlet() {
 
 fun Javalin.configureRest(): Javalin {
     gsonMapper(VokRest.gson)
+    articleRest()
     return this
 }
 

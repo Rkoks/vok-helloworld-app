@@ -1,10 +1,11 @@
-package com.example.vok
+package com.example.vok.view
 
+import com.example.vok.jvmVersion
 import com.github.mvysny.karibudsl.v10.*
 import com.github.mvysny.kaributools.VaadinVersion
 import com.vaadin.flow.router.Route
 
-@Route("")
+@Route("old-welcome")
 class WelcomeView: KComposite() {
     private val root = ui {
         verticalLayout {
